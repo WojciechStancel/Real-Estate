@@ -10,16 +10,16 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
-from pathlib import Path
 import os
+from pathlib import Path
 import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+env_file_path = Path(__file__).resolve().parent.parent
 env = environ.Env()
-
-environ.Env.read_env()
+environ.Env.read_env(str(env_file_path / '.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -28,7 +28,7 @@ environ.Env.read_env()
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool('DEBUG', default=False)
 
 ALLOWED_HOSTS = ["*"]
 
@@ -85,10 +85,17 @@ TEMPLATES = [
 WSGI_APPLICATION = 'btre.wsgi.application'
 
 
-import dj_database_url
+
 
 DATABASES = {
-    "default": dj_database_url.parse(env('DATABASE_URL')),
+    'default': {
+        'ENGINE' : 'django.db.backends.postgresql',
+    'NAME': env('DATABASE_NAME'),
+    'USER': 'wojtek',
+    'PASSWORD': env('DATABASE_PASS'),
+    'HOST': env('DATABASE_HOST'),
+    'PORT': '5432',
+    }
  }
 
 # Password validation
@@ -145,11 +152,10 @@ MEDIA_URL = '/media/'
 
 AWS_ACCESS_KEY_ID=env('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY=env("AWS_SECRET_ACCESS_KEY")
-
-AWS_STORAGE_BUCKET_NAME="mybucket-wojtek"
+AWS_STORAGE_BUCKET_NAME = "mybucket-wojtek"
 DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
-STATICFILES_STORAGE="storages.backends.s3boto3.S3Boto3Storage"
-AWS_S3_CUSTOM_DOMAIN='%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 
 # Messages
