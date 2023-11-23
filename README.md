@@ -1,7 +1,9 @@
 # WS Real Estate
 
-
 Welcome to the WS Real Estate Agency web application. This application is built using Django for the backend and Bootstrap for the frontend. It serves as a platform for managing real estate listings, allowing users to browse and add property listings, as well as providing authentication and registration features. The application utilizes a PostgreSQL database, and it is hosted on AWS with Nginx as the web server.
+
+<img width="100%" alt="ws_real_estate_scr" src="https://github.com/WojciechStancel/Real-Estate/assets/121879383/e7a5d065-45f7-4fe7-b2b6-c42be2dfb4df">
+
 
 ## Features
 
