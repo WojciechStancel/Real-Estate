@@ -1,11 +1,13 @@
-# WS Real Estate
+# WS Real Estate  <img width="30px" src="https://github.com/WojciechStancel/Real-Estate/assets/121879383/4571602e-8f76-4306-b434-b4b18529fecf"> 
+
 
 Welcome to the WS Real Estate Agency web application. This application is built using Django for the backend and Bootstrap for the frontend. It serves as a platform for managing real estate listings, allowing users to browse and add property listings, as well as providing authentication and registration features. The application utilizes a PostgreSQL database, and it is hosted on AWS with Nginx as the web server.
 
 <img width="100%" alt="ws_real_estate_scr" src="https://github.com/WojciechStancel/Real-Estate/assets/121879383/e7a5d065-45f7-4fe7-b2b6-c42be2dfb4df">
 
 
-## Features
+## Features <img width="20px" src="https://github.com/WojciechStancel/Real-Estate/assets/121879383/cad7a0b4-a0f1-40d2-a072-779a7c4f4583">
+
 
 - **Property Listings:** Browse and search for available real estate listings.
 - **User Authentication:** Register and log in securely to access additional features.
@@ -14,7 +16,8 @@ Welcome to the WS Real Estate Agency web application. This application is built 
 - **Database:** The application uses PostgreSQL for data storage, ensuring data integrity and security.
 - **Hosting:** The application is hosted on AWS, making it accessible online.
 
-## Technology Stack
+## Technology Stack <img width="20px" src="https://github.com/WojciechStancel/Real-Estate/assets/121879383/95ae4ffc-3260-40f2-9908-45801ebfe96b">
+
 
 - Backend: Django
 - Frontend: Bootstrap
@@ -22,7 +25,8 @@ Welcome to the WS Real Estate Agency web application. This application is built 
 - Web Server: Nginx
 - Hosting: Amazon Web Service
 
-## Installation
+## Installation <img width="20px" src="https://github.com/WojciechStancel/Real-Estate/assets/121879383/b2b4ed26-93aa-426b-a3a0-a984d3c55ce7">
+
 
 To set up this application locally, follow these steps:
 
@@ -38,7 +42,8 @@ To set up this application locally, follow these steps:
 
 For a production deployment, you will need to configure Nginx and gunicorn to serve the application.
 
-## Usage
+## Usage <img width="20px" src="https://github.com/WojciechStancel/Real-Estate/assets/121879383/6f936693-602b-4ead-9183-ce2a66dc1839">
+
 
 - Visit the application at http://51.20.211.102/
 - Register an account or log in to access advanced features.
