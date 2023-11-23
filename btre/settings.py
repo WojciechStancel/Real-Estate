@@ -14,8 +14,7 @@ environ.Env.read_env(str(env_file_path / '.env'))
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
+DEBUG = True
 
 # ALLOWED_HOSTS = ['51.20.211.102', 'localhost']
 ALLOWED_HOSTS = []
@@ -85,6 +84,13 @@ DATABASES = {
  }
 '''
 
+# DATABASE TO USE ON YOUR LOCAL MACHINE
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
